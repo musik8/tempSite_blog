@@ -1,0 +1,212 @@
+@import "../../assets/stylesheets/main";
+
+.blog-display-container {
+    background-color: $backgroundColor;
+    position: fixed;
+    z-index: 10;   
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1000ms $easeInOut3 700ms; 
+
+    overflow-y: scroll;
+    .preview-content {
+        opacity : 0;
+        transition: opacity 300ms $easeInOut3 400ms;
+    }
+    .button-content {
+        opacity: 0;
+        transition: opacity 300ms $easeInOut3 0ms;
+    }
+
+
+    &.true {
+        transition: opacity 500ms $easeInOut3; 
+        pointer-events: auto;
+        opacity: 1;
+
+        .preview-content {
+            opacity : 1;
+            transition: opacity 300ms $easeInOut3 500ms;
+        }
+        .button-content {
+            opacity: 1;
+            transition: opacity 300ms $easeInOut3 800ms;
+        }
+
+    }
+} 
+
+.blog-display-content {
+ 
+ 
+  
+
+   
+
+    display: flex;
+    padding: $Dmw;
+
+        .preview-content {
+            width: 61%;
+            border: 10px solid $red;
+            box-sizing: border-box;
+            padding: $Dmw;
+
+            h2 {
+                font-size: (60/$desktop) * 100vw;
+                color: $red;
+                margin: 0;
+                text-transform: uppercase;
+            }
+            h3 {
+                text-transform: uppercase;
+                font-size: (20/$desktop) * 100vw;
+                color: $red;
+                margin: 0;
+
+            }
+            p {
+                color: $red;
+                margin: 0;
+                padding: $Dmw/2 0;
+                font-size: (16/$desktop) * 100vw;
+                font-family: $mainTextR;
+            }
+
+        }
+        .button-content {
+            width: 39%;
+            background-color: $red;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;            
+            h4 {
+                color: $backgroundColor;
+                // text-align: right;
+                padding-top: 20px;
+                font-size: (40/$desktop) * 100vw;
+                margin: 0;
+                line-height: 0;
+                position: relative;
+                z-index: 4;
+                transform-origin: center center;
+                transition: color 300ms $easeInOut3;
+                
+            }
+            .pop-up {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                z-index: 3;
+                transform-origin: center center;
+                width: 0px;
+                height: 0px;
+                transform: translate(-50%,-50%);
+                background-color: $backgroundColor;
+                transition: width 300ms $easeInOut3, height 300ms $easeInOut3;;
+                
+            }
+
+            &:hover {
+                h4 {
+                    color: $red;
+                }
+                .pop-up {
+                    width: 50%;
+                    height: 50%;
+
+                }
+            }
+        }
+
+
+    
+}
+
+.blog-items-container {
+
+    .blog-item {
+        display: flex;
+        padding: $Dmw;
+
+        .preview-content {
+            width: 61%;
+            border: 10px solid $red;
+            box-sizing: border-box;
+            padding: $Dmw;
+
+            h2 {
+                font-size: (60/$desktop) * 100vw;
+                color: $red;
+                margin: 0;
+                text-transform: uppercase;
+            }
+            h3 {
+                text-transform: uppercase;
+                font-size: (20/$desktop) * 100vw;
+                color: $red;
+                margin: 0;
+            }
+            p {
+                color: $red;
+                margin: 0;
+                padding-top: $Dmw;
+                font-size: (16/$desktop) * 100vw;
+                font-family: $mainTextR;
+            }
+
+        }
+        .button-content {
+            width: 39%;
+            background-color: $red;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;            
+            h4 {
+                color: $backgroundColor;
+                // text-align: right;
+                padding-top: 20px;
+                font-size: (40/$desktop) * 100vw;
+                margin: 0;
+                line-height: 0;
+                position: relative;
+                z-index: 4;
+                transform-origin: center center;
+                transition: color 300ms $easeInOut3;
+                
+            }
+            .pop-up {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                z-index: 3;
+                transform-origin: center center;
+                width: 0px;
+                height: 0px;
+                transform: translate(-50%,-50%);
+                background-color: $backgroundColor;
+                transition: width 300ms $easeInOut3, height 300ms $easeInOut3;;
+                
+            }
+
+            &:hover {
+                h4 {
+                    color: $red;
+                }
+                .pop-up {
+                    width: 50%;
+                    height: 50%;
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+
+@import "../../assets/stylesheets/main";
+
+
+p {
+    font-family: "Libre Baskerville";
+    line-height: 2.1em;
+    letter-spacing: 0.07em;
+    font-size: 14px;
+}
+hr {
+    margin-top: 80px;
+}
+.main {
+    color: #F24545;
+}
+.audio-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.lab2 {
+    max-width: 940px;
+
+    p {
+
+    }
+    .list-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .item {
+            width: 400px;
+            h2 {
+
+            }
+            p{
+
+            }
+        }
+    }
+}

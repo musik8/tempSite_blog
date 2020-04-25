@@ -1,0 +1,39 @@
+@import "../../assets/stylesheets/main";
+
+.point {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #000;
+    
+}
+.content-container  {
+    &.home {
+        z-index: 5;
+        pointer-events: none;
+        
+
+        .text-content {
+            position: absolute;
+            left: (130/$desktop) * 100vw;
+            top: (0/$desktop) * 100vw;
+            text-align: left;
+           
+            h1 {
+                text-align: left;
+                font-size: (220/1920) * 100vw;
+                font-family: $mainTextB;
+                line-height: 0.9em;
+                
+            }
+        }
+
+        .border-content {
+            border: 30px solid $red;
+            position: absolute; 
+            top: $Dmw;
+            right: $Dmw;
+            bottom: $Dmw;
+            left: $Dmw;
+    
+        }
+    }
+}
